@@ -1,0 +1,3109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monisha K | Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           ROOT COLORS
+        ===================================================== */
+
+        :root {
+
+            --pink: #f45b8b;
+            --pink-dark: #d93669;
+            --pink-light: #ffe4ed;
+            --pink-soft: #fff2f6;
+
+            --purple: #8d7be8;
+            --purple-light: #eeeaff;
+
+            --yellow: #ffd86b;
+            --green: #a9d99b;
+
+            --cream: #fffaf7;
+            --white: #ffffff;
+
+            --text: #38252d;
+            --muted: #75656b;
+
+            --border: #f4cbd8;
+
+            --shadow:
+                0 12px 35px rgba(217, 54, 105, 0.09);
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Quicksand", sans-serif;
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           BACKGROUND DECORATIONS
+        ===================================================== */
+
+        body::before {
+
+            content: "✦   ✧   ☆   +   ✦";
+
+            position: fixed;
+
+            top: 120px;
+
+            left: 10px;
+
+            color: #f2b3c7;
+
+            font-size: 22px;
+
+            letter-spacing: 25px;
+
+            z-index: -1;
+
+            opacity: 0.5;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 999;
+
+            height: 75px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background:
+                rgba(255, 250, 247, 0.96);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom:
+                2px solid #f8dbe4;
+        }
+
+
+        .logo {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size: 28px;
+
+            font-weight: 700;
+
+            color: var(--text);
+        }
+
+
+        .logo span {
+
+            color: var(--pink);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+            list-style: none;
+        }
+
+
+        .nav-links a {
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--pink);
+        }
+
+
+        .connect-btn {
+
+            background:
+                var(--pink);
+
+            color: white;
+
+            padding:
+                12px 21px;
+
+            border-radius:
+                30px;
+
+            font-weight:
+                700;
+
+            box-shadow:
+                0 7px 18px
+                rgba(244, 91, 139, 0.25);
+
+            transition:
+                0.3s;
+        }
+
+
+        .connect-btn:hover {
+
+            background:
+                var(--pink-dark);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height:
+                calc(100vh - 75px);
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            padding:
+                70px 7%;
+
+            overflow:
+                hidden;
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position:
+                absolute;
+
+            width:
+                500px;
+
+            height:
+                500px;
+
+            background:
+                #ffe6ef;
+
+            border-radius:
+                50%;
+
+            right:
+                3%;
+
+            top:
+                40px;
+
+            z-index:
+                -1;
+        }
+
+
+        .hero-container {
+
+            width:
+                100%;
+
+            max-width:
+                1250px;
+
+            margin:
+                auto;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            align-items:
+                center;
+
+            gap:
+                50px;
+        }
+
+
+        .hello {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                24px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .hello span {
+
+            color:
+                var(--pink);
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                clamp(65px, 8vw, 105px);
+
+            line-height:
+                0.95;
+
+            color:
+                var(--pink);
+
+            text-shadow:
+                3px 3px 0 #ffd5e2,
+                6px 6px 0 rgba(244, 91, 139, 0.05);
+        }
+
+
+        .hero h1 span {
+
+            color:
+                var(--text);
+        }
+
+
+        .role {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                25px;
+
+            font-weight:
+                700;
+
+            margin-top:
+                15px;
+        }
+
+
+        .hero-description {
+
+            max-width:
+                540px;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.8;
+
+            font-size:
+                16px;
+
+            margin-top:
+                20px;
+        }
+
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            flex-wrap:
+                wrap;
+
+            margin-top:
+                30px;
+        }
+
+
+        .btn {
+
+            padding:
+                14px 24px;
+
+            border-radius:
+                30px;
+
+            font-weight:
+                700;
+
+            font-size:
+                14px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .primary-btn {
+
+            background:
+                var(--pink);
+
+            color:
+                white;
+
+            box-shadow:
+                0 8px 20px
+                rgba(244, 91, 139, 0.25);
+        }
+
+
+        .primary-btn:hover {
+
+            transform:
+                translateY(-3px);
+
+            background:
+                var(--pink-dark);
+        }
+
+
+        .secondary-btn {
+
+            border:
+                2px solid var(--text);
+
+            background:
+                white;
+        }
+
+
+        .secondary-btn:hover {
+
+            background:
+                var(--pink-soft);
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =====================================================
+           PHOTO AREA
+        ===================================================== */
+
+        .hero-photo-area {
+
+            position:
+                relative;
+
+            min-height:
+                520px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+        }
+
+
+        .photo-circle {
+
+            width:
+                430px;
+
+            height:
+                430px;
+
+            border-radius:
+                50%;
+
+            background:
+                #ffdce8;
+
+            border:
+                7px solid white;
+
+            box-shadow:
+                0 15px 40px
+                rgba(217, 54, 105, 0.12);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            overflow:
+                hidden;
+
+            position:
+                relative;
+        }
+
+
+        /*
+        =====================================================
+        YOUR PHOTO
+
+        Later replace the placeholder with:
+
+        <img src="profile.jpg"
+             alt="Monisha"
+             style="
+             width:100%;
+             height:100%;
+             object-fit:cover;
+             ">
+
+        =====================================================
+        */
+
+
+        .photo-placeholder {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            color:
+                #c46c8a;
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                24px;
+
+            padding:
+                60px;
+        }
+
+
+        .photo-placeholder small {
+
+            display:
+                block;
+
+            font-family:
+                "Quicksand", sans-serif;
+
+            font-size:
+                13px;
+
+            margin-top:
+                10px;
+        }
+
+
+        /* =====================================================
+           FLOATING SYMBOLS
+        ===================================================== */
+
+        .float-symbol {
+
+            position:
+                absolute;
+
+            color:
+                var(--pink);
+
+            font-size:
+                38px;
+
+            font-weight:
+                bold;
+
+            animation:
+                float 3s ease-in-out infinite;
+        }
+
+
+        .symbol-1 {
+
+            top:
+                30px;
+
+            left:
+                5%;
+        }
+
+
+        .symbol-2 {
+
+            right:
+                8%;
+
+            bottom:
+                50px;
+
+            animation-delay:
+                1s;
+        }
+
+
+        .symbol-3 {
+
+            left:
+                8%;
+
+            bottom:
+                100px;
+
+            color:
+                var(--purple);
+
+            animation-delay:
+                0.5s;
+        }
+
+
+        .symbol-4 {
+
+            right:
+                7%;
+
+            top:
+                100px;
+
+            color:
+                #ffb52e;
+
+            animation-delay:
+                1.5s;
+        }
+
+
+        @keyframes float {
+
+            0%, 100% {
+
+                transform:
+                    translateY(0)
+                    rotate(-5deg);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-15px)
+                    rotate(5deg);
+            }
+        }
+
+
+        /* =====================================================
+           GENERAL SECTION
+        ===================================================== */
+
+        section {
+
+            padding:
+                90px 7%;
+        }
+
+
+        .section-container {
+
+            max-width:
+                1250px;
+
+            margin:
+                auto;
+        }
+
+
+        .section-heading {
+
+            margin-bottom:
+                40px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                42px;
+
+            display:
+                inline-block;
+        }
+
+
+        .section-heading h2 span {
+
+            color:
+                var(--pink);
+        }
+
+
+        .section-heading p {
+
+            color:
+                var(--muted);
+
+            margin-top:
+                8px;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-section {
+
+            background:
+                #fff0f5;
+        }
+
+
+        .about-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap:
+                30px;
+
+            align-items:
+                stretch;
+        }
+
+
+        .about-card {
+
+            background:
+                white;
+
+            border:
+                2px solid var(--border);
+
+            border-radius:
+                25px;
+
+            padding:
+                35px;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .mini-photo {
+
+            height:
+                300px;
+
+            border-radius:
+                20px;
+
+            background:
+                #ffdce8;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            color:
+                #bd708a;
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                20px;
+
+            text-align:
+                center;
+        }
+
+
+        .about-text h3 {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                30px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .about-text p {
+
+            line-height:
+                1.9;
+
+            color:
+                var(--muted);
+        }
+
+
+        .education-box {
+
+            margin-top:
+                25px;
+
+            background:
+                var(--pink-soft);
+
+            padding:
+                20px;
+
+            border-radius:
+                18px;
+
+            border-left:
+                5px solid var(--pink);
+        }
+
+
+        .education-box strong {
+
+            color:
+                var(--pink-dark);
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skills-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap:
+                18px;
+        }
+
+
+        .skill-card {
+
+            background:
+                white;
+
+            border:
+                2px solid #f3dce4;
+
+            border-radius:
+                22px;
+
+            padding:
+                25px;
+
+            min-height:
+                170px;
+
+            transition:
+                0.3s;
+
+            position:
+                relative;
+        }
+
+
+        .skill-card:hover {
+
+            transform:
+                translateY(-8px)
+                rotate(-1deg);
+
+            box-shadow:
+                var(--shadow);
+
+            border-color:
+                #f5a9c0;
+        }
+
+
+        .skill-icon {
+
+            width:
+                48px;
+
+            height:
+                48px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--pink-light);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                23px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .skill-card:nth-child(2) .skill-icon,
+        .skill-card:nth-child(6) .skill-icon {
+
+            background:
+                var(--purple-light);
+        }
+
+
+        .skill-card:nth-child(3) .skill-icon,
+        .skill-card:nth-child(7) .skill-icon {
+
+            background:
+                #e6f6e1;
+        }
+
+
+        .skill-card h3 {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                21px;
+        }
+
+
+        .skill-card p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.7;
+
+            margin-top:
+                8px;
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .projects-section {
+
+            background:
+                #fff3f7;
+        }
+
+
+        .projects-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                25px;
+        }
+
+
+        .project-card {
+
+            background:
+                white;
+
+            border:
+                2px solid var(--border);
+
+            border-radius:
+                25px;
+
+            overflow:
+                hidden;
+
+            transition:
+                0.3s;
+
+            box-shadow:
+                0 8px 25px
+                rgba(217, 54, 105, 0.05);
+        }
+
+
+        .project-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .project-top {
+
+            min-height:
+                210px;
+
+            padding:
+                25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe4ed,
+                    #fff5f8
+                );
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+        }
+
+
+        .project-icon {
+
+            font-size:
+                85px;
+
+            filter:
+                drop-shadow(
+                    4px 5px 0
+                    rgba(217, 54, 105, 0.08)
+                );
+        }
+
+
+        .project-number {
+
+            position:
+                absolute;
+
+            top:
+                15px;
+
+            right:
+                20px;
+
+            font-family:
+                "Comic Neue", cursive;
+
+            color:
+                var(--pink);
+
+            font-size:
+                22px;
+        }
+
+
+        .project-body {
+
+            padding:
+                28px;
+        }
+
+
+        .project-label {
+
+            display:
+                inline-block;
+
+            padding:
+                6px 12px;
+
+            background:
+                var(--pink-light);
+
+            color:
+                var(--pink-dark);
+
+            border-radius:
+                20px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .project-body h3 {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                28px;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .project-body p {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.8;
+
+            font-size:
+                14px;
+        }
+
+
+        .tech-list {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                7px;
+
+            margin-top:
+                20px;
+        }
+
+
+        .tech-list span {
+
+            background:
+                #f8f2ff;
+
+            color:
+                #7560b8;
+
+            padding:
+                7px 12px;
+
+            border-radius:
+                20px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        .timeline {
+
+            max-width:
+                900px;
+
+            margin:
+                auto;
+
+            position:
+                relative;
+        }
+
+
+        .timeline::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                20px;
+
+            top:
+                0;
+
+            bottom:
+                0;
+
+            width:
+                3px;
+
+            background:
+                #f4c2d2;
+        }
+
+
+        .timeline-item {
+
+            position:
+                relative;
+
+            padding-left:
+                60px;
+
+            margin-bottom:
+                35px;
+        }
+
+
+        .timeline-dot {
+
+            position:
+                absolute;
+
+            left:
+                8px;
+
+            top:
+                5px;
+
+            width:
+                27px;
+
+            height:
+                27px;
+
+            background:
+                var(--pink);
+
+            border-radius:
+                50%;
+
+            border:
+                6px solid #ffe7ef;
+        }
+
+
+        .timeline-card {
+
+            background:
+                white;
+
+            padding:
+                25px;
+
+            border:
+                2px solid #f3dce4;
+
+            border-radius:
+                20px;
+        }
+
+
+        .timeline-card h3 {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                23px;
+        }
+
+
+        .timeline-card p {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.7;
+
+            margin-top:
+                5px;
+        }
+
+
+        .date {
+
+            color:
+                var(--pink-dark);
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           CERTIFICATIONS
+        ===================================================== */
+
+        .cert-section {
+
+            background:
+                #fff3f7;
+        }
+
+
+        .cert-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                18px;
+        }
+
+
+        .cert-card {
+
+            background:
+                white;
+
+            padding:
+                22px;
+
+            border-radius:
+                18px;
+
+            border:
+                2px solid #f1dbe3;
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            align-items:
+                center;
+        }
+
+
+        .cert-icon {
+
+            width:
+                50px;
+
+            height:
+                50px;
+
+            flex-shrink:
+                0;
+
+            border-radius:
+                15px;
+
+            background:
+                var(--yellow);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                23px;
+        }
+
+
+        .cert-card h3 {
+
+            font-size:
+                15px;
+        }
+
+
+        .cert-card p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+
+            margin-top:
+                4px;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-section {
+
+            background:
+                #fff0f5;
+        }
+
+
+        .contact-box {
+
+            background:
+                white;
+
+            border:
+                2px solid var(--border);
+
+            border-radius:
+                30px;
+
+            padding:
+                50px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                50px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+        }
+
+
+        .contact-box h2 {
+
+            font-family:
+                "Comic Neue", cursive;
+
+            font-size:
+                42px;
+        }
+
+
+        .contact-box h2 span {
+
+            color:
+                var(--pink);
+        }
+
+
+        .contact-box p {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.8;
+
+            margin-top:
+                15px;
+        }
+
+
+        .contact-info {
+
+            margin-top:
+                25px;
+        }
+
+
+        .contact-row {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            align-items:
+                center;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .contact-icon {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            background:
+                var(--pink-light);
+
+            border-radius:
+                50%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+        }
+
+
+        .contact-row span {
+
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
+        }
+
+
+        .contact-row strong {
+
+            display:
+                block;
+
+            font-size:
+                14px;
+        }
+
+
+        .contact-art {
+
+            background:
+                #ffe3ec;
+
+            border-radius:
+                30px;
+
+            min-height:
+                300px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                110px;
+
+            position:
+                relative;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding:
+                25px 7%;
+
+            background:
+                #3b2630;
+
+            color:
+                #fbdde6;
+
+            text-align:
+                center;
+
+            font-size:
+                13px;
+        }
+
+
+        footer span {
+
+            color:
+                #ff83a8;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .hero-container {
+
+                grid-template-columns:
+                    1fr;
+
+                text-align:
+                    center;
+            }
+
+
+            .hero-description {
+
+                margin-left:
+                    auto;
+
+                margin-right:
+                    auto;
+            }
+
+
+            .hero-buttons {
+
+                justify-content:
+                    center;
+            }
+
+
+            .hero-photo-area {
+
+                order:
+                    -1;
+
+                min-height:
+                    430px;
+            }
+
+
+            .photo-circle {
+
+                width:
+                    350px;
+
+                height:
+                    350px;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .about-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        @media (max-width: 750px) {
+
+            .navbar {
+
+                padding:
+                    15px 5%;
+
+                height:
+                    auto;
+
+                flex-direction:
+                    column;
+
+                gap:
+                    15px;
+            }
+
+
+            .nav-links {
+
+                gap:
+                    15px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    center;
+            }
+
+
+            .connect-btn {
+
+                display:
+                    none;
+            }
+
+
+            section {
+
+                padding:
+                    70px 5%;
+            }
+
+
+            .hero {
+
+                padding:
+                    60px 5%;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    70px;
+            }
+
+
+            .projects-grid,
+            .cert-grid,
+            .contact-box {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .contact-box {
+
+                padding:
+                    30px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .nav-links a {
+
+                font-size:
+                    12px;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    55px;
+            }
+
+
+            .role {
+
+                font-size:
+                    20px;
+            }
+
+
+            .photo-circle {
+
+                width:
+                    280px;
+
+                height:
+                    280px;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .section-heading h2 {
+
+                font-size:
+                    35px;
+            }
+
+
+            .contact-box h2 {
+
+                font-size:
+                    34px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="#home" class="logo">
+        Monisha <span>✦</span>
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+
+    <a href="#contact" class="connect-btn">
+        Let's Connect ✈
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+        <!-- HERO TEXT -->
+
+        <div class="hero-text">
+
+            <div class="hello">
+                Hello, I'm <span>✦</span>
+            </div>
+
+
+            <h1>
+
+                Monisha
+
+                <br>
+
+                <span>K</span>
+
+            </h1>
+
+
+            <div class="role">
+                BCA Data Science Graduate
+            </div>
+
+
+            <p class="hero-description">
+
+                I enjoy building creative digital experiences,
+                exploring technology and solving problems through
+                programming, data and software development.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="btn primary-btn">
+
+                    View My Projects →
+
+                </a>
+
+
+                <a href="#contact"
+                   class="btn secondary-btn">
+
+                    Let's Talk ✦
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HERO PHOTO -->
+
+        <div class="hero-photo-area">
+
+
+            <!-- Decorative symbols -->
+
+            <div class="float-symbol symbol-1">
+                ✦
+            </div>
+
+
+            <div class="float-symbol symbol-2">
+                ✧
+            </div>
+
+
+            <div class="float-symbol symbol-3">
+                +
+            </div>
+
+
+            <div class="float-symbol symbol-4">
+                ☆
+            </div>
+
+
+
+            <!-- PHOTO -->
+
+            <div class="photo-circle">
+
+
+                <!--
+
+                ADD YOUR PHOTO LATER
+
+                Replace everything inside this div with:
+
+                <img src="profile.jpg"
+                     alt="Monisha"
+                     style="
+                     width:100%;
+                     height:100%;
+                     object-fit:cover;
+                     ">
+
+                -->
+
+
+                <div class="photo-placeholder">
+
+                    <div style="font-size:70px;">
+                        📸
+                    </div>
+
+
+                    <div>
+
+                        Your Photo
+
+                        <small>
+                            Add your photo here later
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about-section" id="about">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <h2>
+                About <span>Me ✦</span>
+            </h2>
+
+            <p>
+                Get to know me a little better
+            </p>
+
+        </div>
+
+
+
+        <div class="about-grid">
+
+
+            <!-- PHOTO -->
+
+            <div class="about-card">
+
+                <div class="mini-photo">
+
+                    <div>
+
+                        <div style="font-size:65px;">
+                            📷
+                        </div>
+
+                        <br>
+
+                        Your photo goes here
+
+                        <br>
+
+                        <small>
+                            Add it whenever you're ready
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ABOUT TEXT -->
+
+            <div class="about-card about-text">
+
+                <h3>
+                    Hi, I'm Monisha! 🌸
+                </h3>
+
+
+                <p>
+
+                    I am a BCA graduate specializing in Data Science
+                    with a strong foundation in programming, data
+                    analytics, artificial intelligence, machine learning
+                    and software engineering.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I enjoy learning new technologies, solving
+                    programming problems and developing efficient
+                    software solutions. I am particularly interested
+                    in Java, backend development, databases and
+                    modern web technologies.
+
+                </p>
+
+
+
+                <div class="education-box">
+
+                    <strong>
+                        🎓 Bachelor of Computer Applications
+                    </strong>
+
+                    <br><br>
+
+                    Data Science
+
+                    <br>
+
+                    Jyoti Nivas College Autonomous, Bangalore
+
+                    <br><br>
+
+                    <strong>
+                        74%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <h2>
+                My <span>Skills ✨</span>
+            </h2>
+
+            <p>
+                Technologies and concepts I have learned
+            </p>
+
+        </div>
+
+
+
+        <div class="skills-grid">
+
+
+            <!-- JAVA -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ☕
+                </div>
+
+                <h3>
+                    Core Java
+                </h3>
+
+                <p>
+                    OOP Concepts, Collections,
+                    Multithreading and Thread Operations.
+                </p>
+
+            </div>
+
+
+
+            <!-- SQL -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🗄️
+                </div>
+
+                <h3>
+                    SQL & JDBC
+                </h3>
+
+                <p>
+                    SQL, JDBC Connection,
+                    Queries, CRUD and Database Operations.
+                </p>
+
+            </div>
+
+
+
+            <!-- WEB -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    &lt;/&gt;
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    HTML, CSS, JavaScript and
+                    Responsive Web Development.
+                </p>
+
+            </div>
+
+
+
+            <!-- SERVLETS -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Servlets
+                </h3>
+
+                <p>
+                    Java Servlets and
+                    Web Application Development.
+                </p>
+
+            </div>
+
+
+
+            <!-- HIBERNATE -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🌿
+                </div>
+
+                <h3>
+                    Hibernate
+                </h3>
+
+                <p>
+                    ORM Concepts, Mapping
+                    and Persistence.
+                </p>
+
+            </div>
+
+
+
+            <!-- SPRING BOOT -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Spring Boot
+                </h3>
+
+                <p>
+                    Backend Development,
+                    REST APIs and Application Configuration.
+                </p>
+
+            </div>
+
+
+
+            <!-- DATA SCIENCE -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Data Science
+                </h3>
+
+                <p>
+                    Data Analysis, Visualization,
+                    Statistics, NumPy and Pandas.
+                </p>
+
+            </div>
+
+
+
+            <!-- AI ML -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI & ML
+                </h3>
+
+                <p>
+                    AI Fundamentals,
+                    Supervised and Unsupervised Learning.
+                </p>
+
+            </div>
+
+
+
+            <!-- CYBER SECURITY -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Cyber Security
+                </h3>
+
+                <p>
+                    Cyber Security Awareness
+                    and Information Security Fundamentals.
+                </p>
+
+            </div>
+
+
+
+            <!-- SOFTWARE ENGINEERING -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Software Engineering
+                </h3>
+
+                <p>
+                    SDLC, Requirement Analysis
+                    and Software Testing Fundamentals.
+                </p>
+
+            </div>
+
+
+
+            <!-- PROGRAMMING -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    Python, C, C++ and Java.
+                </p>
+
+            </div>
+
+
+
+            <!-- TOOLS -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Tools
+                </h3>
+
+                <p>
+                    VS Code, Jupyter Notebook,
+                    Git, GitHub and R Studio.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="projects-section" id="projects">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <h2>
+                My <span>Projects 💡</span>
+            </h2>
+
+            <p>
+                Academic and internship work
+            </p>
+
+        </div>
+
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <div class="project-card">
+
+
+                <div class="project-top">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <div class="project-icon">
+                        💻
+                    </div>
+
+                </div>
+
+
+
+                <div class="project-body">
+
+
+                    <div class="project-label">
+
+                        INTERNSHIP PROJECT
+
+                    </div>
+
+
+                    <h3>
+                        Front-End Development
+                    </h3>
+
+
+                    <p>
+
+                        Completed a 90-hour Front-End Development
+                        internship at Innovaskill Technologies Pvt. Ltd.,
+                        Bangalore.
+
+                    </p>
+
+
+                    <br>
+
+
+                    <p>
+
+                        Gained practical experience in HTML, CSS and
+                        JavaScript while developing responsive web pages
+                        and strengthening problem-solving, communication
+                        and teamwork skills.
+
+                    </p>
+
+
+
+                    <div class="tech-list">
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>JavaScript</span>
+
+                        <span>Responsive Design</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 02 -->
+
+            <div class="project-card">
+
+
+                <div class="project-top">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <div class="project-icon">
+                        🏫
+                    </div>
+
+                </div>
+
+
+
+                <div class="project-body">
+
+
+                    <div class="project-label"
+                         style="
+                         background:#eeeaff;
+                         color:#6856b4;
+                         ">
+
+                        FINAL YEAR PROJECT
+
+                    </div>
+
+
+                    <h3>
+                        Smart School Management System
+                    </h3>
+
+
+                    <p>
+
+                        Developed a web-based School Management System
+                        designed to automate academic and administrative
+                        operations through a centralized platform.
+
+                    </p>
+
+
+                    <br>
+
+
+                    <p>
+
+                        Integrated an API Server to manage student records,
+                        attendance, examination details and notifications.
+                        MongoDB was used for data storage and retrieval.
+
+                    </p>
+
+
+
+                    <div class="tech-list">
+
+                        <span>React.js</span>
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>JavaScript</span>
+
+                        <span>API Server</span>
+
+                        <span>MongoDB</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <h2>
+                My <span>Journey 🎓</span>
+            </h2>
+
+            <p>
+                Education and experience
+            </p>
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <!-- BCA -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-card">
+
+                    <div class="date">
+                        AUG 2022 — MAY 2025
+                    </div>
+
+
+                    <h3>
+                        Bachelor of Computer Applications
+                    </h3>
+
+
+                    <p>
+                        Data Science — 74%
+                    </p>
+
+
+                    <p>
+                        Jyoti Nivas College Autonomous,
+                        Bangalore
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INTERNSHIP -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-card">
+
+                    <div class="date">
+                        MAY 2025 — JUNE 2025
+                    </div>
+
+
+                    <h3>
+                        Front-End Development Intern
+                    </h3>
+
+
+                    <p>
+                        Innovaskill Technologies Pvt. Ltd.,
+                        Bangalore
+                    </p>
+
+
+                    <p>
+                        90-hour internship
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PUC -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-card">
+
+                    <div class="date">
+                        JUN 2020 — MAY 2022
+                    </div>
+
+
+                    <h3>
+                        Pre-University Course
+                    </h3>
+
+
+                    <p>
+                        92% — Sri Sharadha College,
+                        Attibele, Bangalore
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SSLC -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-card">
+
+                    <div class="date">
+                        JUN 2019 — MAY 2020
+                    </div>
+
+
+                    <h3>
+                        SSLC
+                    </h3>
+
+
+                    <p>
+                        76% — V Blooms International School
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+
+<section class="cert-section">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <h2>
+                My <span>Certifications 🏆</span>
+            </h2>
+
+            <p>
+                Courses and certifications I've completed
+            </p>
+
+        </div>
+
+
+
+        <div class="cert-grid">
+
+
+            <!-- CERTIFICATE 01 -->
+
+            <div class="cert-card">
+
+                <div class="cert-icon">
+                    ☁️
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Innovating with Google Cloud AI
+                    </h3>
+
+                    <p>
+                        Google Cloud & Simplilearn SkillUp — 2026
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CERTIFICATE 02 -->
+
+            <div class="cert-card">
+
+                <div class="cert-icon">
+                    💻
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Front-End Development Internship
+                    </h3>
+
+                    <p>
+                        Innovaskill Technologies Pvt. Ltd.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CERTIFICATE 03 -->
+
+            <div class="cert-card">
+
+                <div class="cert-icon">
+                    🛡️
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        National Cyber Security Awareness Quiz
+                    </h3>
+
+                    <p>
+                        Certificate of Participation — 2025
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CERTIFICATE 04 -->
+
+            <div class="cert-card">
+
+                <div class="cert-icon">
+                    🌸
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Reproductive Health
+                    </h3>
+
+                    <p>
+                        Infosys Springboard — 2024
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact-section" id="contact">
+
+    <div class="section-container">
+
+
+        <div class="contact-box">
+
+
+            <!-- CONTACT DETAILS -->
+
+            <div>
+
+
+                <h2>
+
+                    Let's create
+
+                    <br>
+
+                    something
+                    <span>amazing ✦</span>
+
+                </h2>
+
+
+                <p>
+
+                    Have an opportunity, project or just want
+                    to say hello? I'd love to hear from you!
+
+                </p>
+
+
+
+                <div class="contact-info">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">
+                            ✉️
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+
+                            <strong>
+                                monishakrishna465@gmail.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">
+                            📞
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+
+                            <strong>
+                                +91 8884824139
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LOCATION -->
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+
+                            <strong>
+                                Bangalore, Karnataka
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT ILLUSTRATION -->
+
+            <div class="contact-art">
+
+                💻
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    Made with
+    <span>✦</span>
+    & lots of coffee ☕
+
+    <br><br>
+
+    © 2026 Monisha K.
+    All Rights Reserved.
+
+</footer>
+
+
+</body>
+
+</html>
